@@ -1,6 +1,6 @@
 # AEMEngineering
 
-This web service takes an number of type Integer and converts to Roman.
+This web service takes a number of type Integer and converts to Roman.
 
 Wikipedia: https://en.wikipedia.org/wiki/Roman_numerals
 
@@ -15,6 +15,14 @@ Input range: [1-3999]
 
 ### TestFiles
 1. The test files are present in "EngineeringTest/src/test/java/com/test/AEM/EngineeringTest"
+
+### Dependencies
+    spring-boot-starter-actuator
+    spring-boot-starter-web
+    micrometer-registry-prometheus
+    spring-boot-devtools
+    JUnitParams
+    
 
 # Approach
 
@@ -53,7 +61,7 @@ GET CALL: http://localhost:8080/v1/integertToRoman/-2
 4. RightClick on the file then click "Run"
 5. The server should start on port "localhost:8080"
 6. In POSTMAN, use the following GET call: "http://localhost:8080/v1/integertToRoman/1099", replace "1099" with any integer between 1-3999
-7. For Valid Inputs we will get 200 HTTP status with corresponding response and for Invalid Inputs we qill 400 http status code
+7. For Valid Inputs we will get 200 HTTP status with corresponding response and for Invalid Inputs we will 400 http status code
 ## Running test-cases
 1. If using IntelliJ, right-click on project, there will be an option to "Run 'all Tests'"
 2. If using Eclipse, navigate to "EngineeringTest/src/test/java/com/test/AEM/EngineeringTest/RomanNumeralUnitTests.java", rihgt-click on file and then select Run As -> JUnit Test (If prompted select "RomanNumeralUnitTests")
@@ -61,12 +69,14 @@ GET CALL: http://localhost:8080/v1/integertToRoman/-2
 
 ## Metrics, Monitoring, Logging
 For devops capabilities, Prometheus and Grafana is used.
+
 Prometheus: Prometheus is a monitoring solution for storing time series data like metrics.
+
 Grafana: Grafana allows to visualize the data stored in Prometheus.
 
 ## Steps need to follow to see metrics and logs
 1. Download Prometheus from: https://prometheus.io/download/
-2. After extracting the zip file, navigate to the extracted folder ands start Prometheus server.
+2. After extracting the zip file, navigate to the extracted folder and start Prometheus server.
 3. Navigate to the Prometheus.YAML file and add the follwong lines:
 
 ""  - job_name: "spring-actuator"
@@ -89,7 +99,7 @@ Grafana: Grafana allows to visualize the data stored in Prometheus.
 
 7. Download Grafana from "https://grafana.com/grafana/download?platform=windows"
 8. Extract and navigate to "bin" folder and using powershell, start grafana, the grafana should start on port "localhost:3000"
-9. If ask for username/password, use "admin" as username and "passowrd" as password
+9. If ask for username/password, use "admin" as username and "password" as password
 10. Add DataSource as "Prometheus" in DashBoard and select the metrics needed.
 11. This will create a dashboard having all the metrics at one place with visulaization
     
