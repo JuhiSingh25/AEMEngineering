@@ -1,4 +1,3 @@
-FROM openjdk:8
-EXPOSE 8080
-ADD target/engineeringTest-AEM engineeringTest-AEM
-ENTRYPOINT ["java","-jar","/engineeringTest-AEM"]
+FROM openjdk:17
+ADD target/engineeringTest-AEM.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
