@@ -94,3 +94,26 @@ Grafana: Grafana allows to visualize the data stored in Prometheus.
 11. This will create a dashboard having all the metrics at one place with visulaization
     
 ![Grafana Dashboard](https://github.com/JuhiSingh25/AEMEngineering/assets/89157686/6fbd0c0b-fe93-4906-9762-dfa76c32d34a)
+
+## Docker Container
+1. Added DockerFile
+   
+![image](https://github.com/JuhiSingh25/AEMEngineering/assets/89157686/bd1729f4-8629-4092-973e-2ff3b30e7152)
+
+2. Starting docker for the project
+   
+![image](https://github.com/JuhiSingh25/AEMEngineering/assets/89157686/c69f60ee-f39a-4bcd-9076-2f26e3695785)
+
+3. Taking the latest image and assigning a port(localhost:8002) to run for that docker image:
+
+![image](https://github.com/JuhiSingh25/AEMEngineering/assets/89157686/a5dade4e-9d7e-4bf1-a8bf-a33bf53a5b0f)
+
+4. Verifying that project is running using the docker image.
+
+![image](https://github.com/JuhiSingh25/AEMEngineering/assets/89157686/71b4ecd6-622d-4457-98fa-e1f7675299ac)
+
+   
+
+   
+
+
